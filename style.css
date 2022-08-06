@@ -134,14 +134,14 @@ section>*{
     background: url("images/mobile/image-transform.jpg");
     background-size: cover;
     background-position: center;
-    min-height: 350px;
+    min-height: 450px;
     width: 100%;
 }
 .full-width-two{
     background: url("images/mobile/image-stand-out.jpg");
     background-size: cover;
     background-position: center;
-    min-height: 350px;
+    min-height: 450px;
    /* height: 100%;*/
 }
 .section-one h2,
@@ -293,10 +293,10 @@ nav,
     }
     .section-three,
     .section-four{
-        height: auto;
+        height: 600px;
+        width: 100%;
     }
     img.logo{
-        /* max-width: 200px; */
         height: 40px;
     }
     span.triangle,
@@ -324,10 +324,10 @@ nav,
     .section-three{
         margin:  0;
     }
-    .section-four,
+    /* .section-four,
     .section-three{
         height: 80vh;
-    }
+    } */
     section>*{
         padding: 3em;
     }
@@ -341,13 +341,12 @@ nav,
     }
     .full-width-one{
         background: url("images/desktop/image-transform.jpg") cover center;
-        min-height: 400px;
-        height: 100%;
+        min-height: 500px;
         width: 100%;
    }
     .full-width-two{
         background: url("images/desktop/image-stand-out.jpg") cover center;
-        min-height: 400px;     
+        min-height: 500px;     
     }
     .section-three{
         background: url("images/desktop/image-graphic-design.jpg") no-repeat center;
