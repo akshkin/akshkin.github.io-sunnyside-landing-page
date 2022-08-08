@@ -70,6 +70,12 @@ footer a{
 .hamburger{
     cursor: pointer;
 }
+header{
+    position: absolute;
+    background: transparent;
+    top: 0;
+    width: 100%;
+}
 .nav-bar{
     visibility: hidden;
     position: fixed;
@@ -117,12 +123,15 @@ a.nav-link:focus{
     padding: 0.5em 1em;
     cursor: pointer;
 }
-
-header{ 
+header{
+    
+}
+.hero{ 
     background: url("images/mobile/image-header.jpg");
     background-size: cover;
     background-position: center;
     min-height: 80vh;
+    border: 1px solid transparent;
 }
 nav{
     padding: 1.5em 1em;
@@ -274,11 +283,11 @@ nav,
 @media (min-width:540px){
     .section-three,
     .section-four{
-        height: 100vh;
+        height: 90vh;
     }
 }
 @media (min-width: 700px){
-    header{
+    .hero{
         background-image: url("images/desktop/image-header.jpg");
     }
     .nav-bar{
@@ -288,13 +297,16 @@ nav,
         width: auto;
         background: inherit;
         overflow: hidden;
-        margin: 0
-     
+        margin: 0;     
+    }
+    .hero h1{
+        margin-top: 2em;
     }
     .section-three,
     .section-four{
-        height: 600px;
+        height: 400px;
         width: 100%;
+        margin: 0;
     }
     img.logo{
         height: 40px;
@@ -342,7 +354,7 @@ nav,
     .full-width-one{
         background: url("images/desktop/image-transform.jpg") cover center;
         min-height: 500px;
-        width: 100%;
+        /* width: 100%; */
    }
     .full-width-two{
         background: url("images/desktop/image-stand-out.jpg") cover center;
