@@ -6,13 +6,17 @@ font-family: 'Fraunces', serif;*/
 body{
     margin: 0;
     font-family: 'Barlow', sans-serif;  
+    font-size: 1rem;
     text-align: center;  
-    color: hsl(213, 9%, 39%)
+    color: hsl(213, 9%, 39%);
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 img{
     max-width: 100%;
 }
+
 h1,
 h2{
     font-family: 'Fraunces'
@@ -24,9 +28,8 @@ h3{
 h1{
     color: white;
     letter-spacing: 5px;
-    padding: 2em 1em 0.5em;
-    margin-top: 3em;
-    
+    padding: 5em 1em 0.5em;
+    margin-top: 0;
 }
 h2, h3{
     color: hsl(212, 27%, 19%);
@@ -45,8 +48,12 @@ p{
 a{
     text-decoration: none;
 }
-footer a{
+footer .footer-link{
     color: hsl(167, 40%, 24%);
+}
+footer .footer-link:hover,
+footer .footer-link:focus{
+    color: white;
 }
 .yellow-line,
 .red-line{
@@ -73,8 +80,8 @@ footer a{
 }
 header{
     position: absolute;
-    background: transparent;
-    top: 0;
+    top: 0;  
+    height: auto; 
     width: 100%;
 }
 .nav-bar{
@@ -118,19 +125,19 @@ a.nav-link{
 }
 a.nav-link:hover,
 a.nav-link:focus{    
-    border: 1px solid yellow;
     border-radius: 50px;
-    background: yellow;
-    padding: 0.5em 1em;
+    background: hsl(51, 100%, 49%);
+    padding: 0.7em 1.5em;
     cursor: pointer;
+    color: black;
 }
 
 .hero{ 
     background: url("images/mobile/image-header.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     min-height: 80vh;
-    border: 1px solid transparent;
+   
 }
 nav{
     padding: 1.5em 1em;
@@ -138,19 +145,20 @@ nav{
 section>*{
     padding: 0 1em;
 }
+.section-one >div,
+.section-two > div{
+    min-height: 400px;
+    align-items: center;
+}
 .full-width-one{
     background: url("images/mobile/image-transform.jpg");
     background-size: cover;
     background-position: center;
-    min-height: 450px;
-
 }
 .full-width-two{
     background: url("images/mobile/image-stand-out.jpg");
     background-size: cover;
     background-position: center;
-    min-height: 450px;
- 
 }
 .section-one h2,
 .section-two h2{
@@ -162,7 +170,6 @@ section>*{
     text-decoration: none;
     font-family: 'Fraunces', serif;
     color:hsl(212, 27%, 19%);
-    
 }
 
 .section-two{
@@ -181,7 +188,7 @@ section>*{
 .section-three > *,
 .section-four>*{
     position: absolute;
-    bottom: 5%;
+    bottom: 2%;
 }
 .section-four{
     background: url("images/desktop/image-photography.jpg");
@@ -259,14 +266,21 @@ nav,
 .section-one,
 .section-two{
     flex-direction: column-reverse;
-    margin-bottom: 0;
 }
+.section-one .content,
+.section-two .content{
+    display: grid;
+    place-content: center;
+    grid-gap: 1em;
+    justify-items: center;
+}
+
 .wrapper,
-.container-flex
-{
+.container-flex {
     flex-direction: column;
     align-items: center;
-}
+} 
+ 
 .section-one div ,
 .section-two div,
 .container-flex img {
@@ -276,41 +290,50 @@ nav,
 .open-nav{
     visibility: unset;
     transform: translateY(0);
-    /* opacity: 0; */
 }
 
-@media (min-width:540px){
-    .section-three,
-    .section-four{
-        height: 90vh;
-    }
-}
+
 @media (min-width: 800px){
+    html{
+        font-size: 1.25rem;
+    }
     .hero h1{
         font-size: 3rem;
-        margin-top: 2em;
-
+        padding-top: 0;
+        padding-top: 3em;
+    }
+    header{
+       max-width: 1400px;
+       margin: 0 auto;
     }
     .hero{
         height: 100vh;
         background-image: url("images/desktop/image-header.jpg");
+           
     }
     .nav-bar{
         visibility: visible;
         position: unset;
         height: auto;   
         width: auto;
-        background: inherit;
+        background: transparent;
         overflow: hidden;
         margin: 0;     
+        top: 1%;
     }
+    a.nav-link:hover,
+    a.nav-link:focus{    
+        border-radius: 50px;
+        background: lightblue;
+        padding: 0.5em 1.5em;
+        cursor: pointer;
+        color: white;
+    }
+    a.nav-link:active{
+        background-color: white;
+        color: black;
+    }    
     
-    .section-three,
-    .section-four{
-        height: 100%;
-        width: 100%;
-        margin: 0;
-    }
     img.logo{
         height: 40px;
     }
@@ -330,7 +353,10 @@ nav,
     a.nav-link{
         color: white;
     }
-      
+    .full-width-one,
+    .full-width-two{
+        height: 500px;
+    }  
     .section-one h2,
     .section-two h2{
         margin-top: 0;
@@ -339,9 +365,11 @@ nav,
     .section-three{
         margin:  0;
     }
-    .section-four,
-    .section-three{
-        height: 80vh;
+    .section-three,
+    .section-four{
+        height: 600px;
+        width: 100%;
+        margin: 0;
     }
     section>*{
         padding: 3em;
@@ -382,10 +410,14 @@ nav,
     .section-one>div,
     .section-two>div{
         width: 100%;
+        text-align: left;
     }
     main{
         display: grid;
-        grid-template: auto auto auto auto /repeat(2, 50%);
+        grid-template: repeat(5, auto) /repeat(2, 50%);
+    }
+    .hero{
+        grid-column: 1/-1
     }
     .section-one,
     .section-two{
